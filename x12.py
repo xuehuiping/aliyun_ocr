@@ -87,16 +87,17 @@ def demo(appcode, img_file, result_path):
         result_str = content
 
     print(result_str)
-    with open(os.path.join(result_path, img_file) + '.json', 'w') as f:
-        f.write(result_str)
+    # with open(os.path.join(result_path, img_file) + '.json', 'w') as f:
+    #     f.write(result_str)
 
     result = json.loads(result_str)
     tables = result['tables']
-    with open(os.path.join(result_path, img_file) + '.html', 'w') as f:
-        f.write(tables)
+    print(tables)
+    # with open(os.path.join(result_path, img_file) + '.html', 'w') as f:
+    #     f.write(tables)
 
 
 if __name__ == '__main__':
-    appcode = 'XXX'
-    img_file = 'WechatIMG38.png'
+    appcode = open('appcode.txt').read()
+    img_file = 'WechatIMG40.png'
     demo(appcode, img_file, result_path='result')
