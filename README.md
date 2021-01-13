@@ -7,3 +7,5 @@
 `pip install aliyun-python-sdk-core`
 
 或者拷贝依赖包com，来源`https://github.com/aliyun/api-gateway-demo-sign-python`
+
+（3）python2
